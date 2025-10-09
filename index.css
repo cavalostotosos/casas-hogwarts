@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Minecraft';
-    src: url('https://assets.codepen.io/36869/MinecraftTen-VGORe.woff') format('woff');
+    src: url('') format('woff');
   }
   
   @layer reset {
@@ -36,7 +36,7 @@
       -webkit-font-smoothing: antialiased;
       display: grid;
       place-content: center;
-      background-color: #333;
+      background-color: #fff;
       padding: 1rem;
     }
   
@@ -233,20 +233,7 @@
       justify-content: space-between;
       align-items: center;
   
-      h1 {
-        --color: black;
-        --shadow-width: 2px;
-        --shadow-width-negative: calc(2px * -1);
-        color: white;
-        font-size: clamp(1.25rem, 0.875rem + 2vw, 2rem);
-        text-box: trim-both cap alphabetic;
-        text-shadow: 0 var(--shadow-width) 0 var(--color),
-        var(--shadow-width) 0 0 var(--color),
-        var(--shadow-width) var(--shadow-width) 0 var(--color),
-        var(--shadow-width-negative) var(--shadow-width-negative) 0 var(--color),
-        var(--shadow-width) var(--shadow-width-negative) 0 var(--color),
-        var(--shadow-width-negative) var(--shadow-width) 0 var(--color);
-      }
+      
   
       & > div {
         display: flex;
@@ -287,10 +274,10 @@
   
   div.characters {
     display: grid;
-    gap: .5rem;
-    grid-template-columns: repeat(5, minmax(110px, 1fr));
-    grid-template-rows: repeat(3, 160px);
-    padding: .5rem;
+    gap: 1rem;
+    grid-template-columns: repeat(4, minmax(110px, 1fr));
+    grid-template-rows: repeat(1, 200px);
+    padding: 1rem;
     background-color: black;
     box-shadow: 6px 6px #222222;
     border: 2px solid #999999;
@@ -301,6 +288,7 @@
       overflow: hidden;
       display: grid;
       place-items: center;
+      height: 200px;
   
       &:has(input:checked) {
         overflow: visible;
@@ -338,8 +326,8 @@
   
       & > .character {
         img {
-          max-width: 70px;
-          max-height: 70px;
+          max-width: 100px;
+          max-height: 100px;
           width: auto;
           transition: scale 0.2s ease;
           opacity: .75;
@@ -350,525 +338,34 @@
     }
   }
   
-  .characters:has(div:nth-child(1) > input:checked) + .preview {
-    --name: var(--characater-1);
+
   
-    & > .preview-container {
-      --sprite-image: var(--image-1);
-      /* sprite columns */
-      --sprite-c: 5;
-      /* sprite image height */
-      --sprite-h: 5364;
-      /* sprite image width */
-      --sprite-w: 2980;
-      /* Frame frames */
-      --sprite-f: 42;
-      /* Frame end position */
-      --sprite-fe: calc(var(--sprite-f) - 1);
-    }
-  }
+
+
   
-  .characters:has(div:nth-child(2) > input:checked) + .preview {
-    --name: var(--characater-2);
+ 
   
-    & > .preview-container {
-      --sprite-image: var(--image-2);
-      /* sprite columns */
-      --sprite-c: 5;
-      /* sprite image height */
-      --sprite-h: 3576;
-      /* sprite image width */
-      --sprite-w: 2980;
-      /* Frame frames */
-      --sprite-f: 28;
-      /* Frame end position */
-      --sprite-fe: calc(var(--sprite-f) - 1);
-    }
-  }
+ 
   
-  .characters:has(div:nth-child(3) > input:checked) + .preview {
-    --name: var(--characater-3);
+
   
-    & > .preview-container {
-      --sprite-image: var(--image-3);
-      /* sprite columns */
-      --sprite-c: 5;
-      /* sprite image height */
-      --sprite-h: 7152;
-      /* sprite image width */
-      --sprite-w: 2980;
-      /* Frame frames */
-      --sprite-f: 60;
-      /* Frame end position */
-      --sprite-fe: calc(var(--sprite-f) - 1);
-    }
-  }
+
   
-  .characters:has(div:nth-child(4) > input:checked) + .preview {
-    --name: var(--characater-4);
   
-    & > .preview-container {
-      /* sprite image */
-      --sprite-image: var(--image-4);
-      /* sprite columns */
-      --sprite-c: 5;
-      /* sprite image height */
-      --sprite-h: 6556;
-      /* sprite image width */
-      --sprite-w: 2980;
-      /* Frame frames */
-      --sprite-f: 55;
-      /* Frame end position */
-      --sprite-fe: calc(var(--sprite-f) - 1);
-    }
-  }
   
-  .characters:has(div:nth-child(5) > input:checked) + .preview {
-    --name: var(--characater-5);
+
   
-    & > .preview-container {
-      /* sprite image */
-      --sprite-image: var(--image-5);
-      /* sprite columns */
-      --sprite-c: 5;
-      /* sprite image height */
-      --sprite-h: 6556;
-      /* sprite image width */
-      --sprite-w: 2980;
-      /* Frame frames */
-      --sprite-f: 55;
-      /* Frame end position */
-      --sprite-fe: calc(var(--sprite-f) - 1);
-    }
-  }
+
+
   
-  .characters:has(div:nth-child(6) > input:checked) + .preview {
-    --name: var(--characater-6);
+
+
   
-    & > .preview-container {
-      /* sprite image */
-      --sprite-image: var(--image-6);
-      /* sprite columns */
-      --sprite-c: 5;
-      /* sprite image height */
-      --sprite-h: 11920;
-      /* sprite image width */
-      --sprite-w: 2980;
-      /* Frame frames */
-      --sprite-f: 99;
-      /* Frame end position */
-      --sprite-fe: calc(var(--sprite-f) - 1);
-    }
-  }
+
   
-  .characters:has(div:nth-child(7) > input:checked) + .preview {
-    --name: var(--characater-7);
+
   
-    & > .preview-container {
-      /* sprite image */
-      --sprite-image: var(--image-7);
-      /* sprite columns */
-      --sprite-c: 5;
-      /* sprite image height */
-      --sprite-h: 8940;
-      /* sprite image width */
-      --sprite-w: 2980;
-      /* Frame frames */
-      --sprite-f: 72;
-      /* Frame end position */
-      --sprite-fe: calc(var(--sprite-f) - 1);
-    }
-  }
   
-  .characters:has(div:nth-child(8) > input:checked) + .preview {
-    --name: var(--characater-8);
   
-    & > .preview-container {
-      /* sprite image */
-      --sprite-image: var(--image-8);
-      /* sprite columns */
-      --sprite-c: 5;
-      /* sprite image height */
-      --sprite-h: 5960;
-      /* sprite image width */
-      --sprite-w: 2980;
-      /* Frame frames */
-      --sprite-f: 47;
-      /* Frame end position */
-      --sprite-fe: calc(var(--sprite-f) - 1);
-    }
-  }
   
-  .characters:has(div:nth-child(9) > input:checked) + .preview {
-    --name: var(--characater-9);
-  
-    & > .preview-container {
-      /* sprite image */
-      --sprite-image: var(--image-9);
-      /* sprite columns */
-      --sprite-c: 5;
-      /* sprite image height */
-      --sprite-h: 4768;
-      /* sprite image width */
-      --sprite-w: 2980;
-      /* Frame frames */
-      --sprite-f: 37;
-      /* Frame end position */
-      --sprite-fe: calc(var(--sprite-f) - 1);
-    }
-  }
-  
-  .characters:has(div:nth-child(10) > input:checked) + .preview {
-    --name: var(--characater-10);
-  
-    & > .preview-container {
-      /* sprite image */
-      --sprite-image: var(--image-10);
-      /* sprite columns */
-      --sprite-c: 5;
-      /* sprite image height */
-      --sprite-h: 10728;
-      /* sprite image width */
-      --sprite-w: 2980;
-      /* Frame frames */
-      --sprite-f: 88;
-      /* Frame end position */
-      --sprite-fe: calc(var(--sprite-f) - 1);
-    }
-  }
-  
-  .characters:has(div:nth-child(11) > input:checked) + .preview {
-    --name: var(--characater-11);
-  
-    & > .preview-container {
-      /* sprite image */
-      --sprite-image: var(--image-11);
-      /* sprite columns */
-      --sprite-c: 5;
-      /* sprite image height */
-      --sprite-h: 7748;
-      /* sprite image width */
-      --sprite-w: 2980;
-      /* Frame frames */
-      --sprite-f: 65;
-      /* Frame end position */
-      --sprite-fe: calc(var(--sprite-f) - 1);
-    }
-  }
-  
-  .characters:has(div:nth-child(12) > input:checked) + .preview {
-    --name: var(--characater-12);
-  
-    & > .preview-container {
-      /* sprite image */
-      --sprite-image: var(--image-12);
-      /* sprite columns */
-      --sprite-c: 5;
-      /* sprite image height */
-      --sprite-h: 7152;
-      /* sprite image width */
-      --sprite-w: 2980;
-      /* Frame frames */
-      --sprite-f: 58;
-      /* Frame end position */
-      --sprite-fe: calc(var(--sprite-f) - 1);
-    }
-  }
-  
-  .characters:has(div:nth-child(13) > input:checked) + .preview {
-    --name: var(--characater-13);
-  
-    & > .preview-container {
-      /* sprite image */
-      --sprite-image: var(--image-13);
-      /* sprite columns */
-      --sprite-c: 5;
-      /* sprite image height */
-      --sprite-h: 12516;
-      /* sprite image width */
-      --sprite-w: 2980;
-      /* Frame frames */
-      --sprite-f: 104;
-      /* Frame end position */
-      --sprite-fe: calc(var(--sprite-f) - 1);
-    }
-  }
-  
-  .characters:has(div:nth-child(14) > input:checked) + .preview {
-    --name: var(--characater-14);
-  
-    & > .preview-container {
-      /* sprite image */
-      --sprite-image: var(--image-14);
-      /* sprite columns */
-      --sprite-c: 5;
-      /* sprite image height */
-      --sprite-h: 8344;
-      /* sprite image width */
-      --sprite-w: 2980;
-      /* Frame frames */
-      --sprite-f: 69;
-      /* Frame end position */
-      --sprite-fe: calc(var(--sprite-f) - 1);
-    }
-  }
-  
-  .characters:has(div:nth-child(15) > input:checked) + .preview {
-    --name: var(--characater-15);
-  
-    & > .preview-container {
-      /* sprite image */
-      --sprite-image: var(--image-15);
-      /* sprite columns */
-      --sprite-c: 5;
-      /* sprite image height */
-      --sprite-h: 4768;
-      /* sprite image width */
-      --sprite-w: 2980;
-      /* Frame frames */
-      --sprite-f: 37;
-      /* Frame end position */
-      --sprite-fe: calc(var(--sprite-f) - 1);
-    }
-  }
-  
-  div.preview {
-    display: grid;
-    position: relative;
-    grid-template-rows: auto 1fr;
-    place-items: center;
-    gap: .5rem;
-    padding: .5rem;
-    background-color: black;
-    border: 2px solid #4c8ee1;
-    box-shadow: 6px 6px #222222;
-    user-select: none;
-  
-    &:before {
-      content: var(--name);
-      background: #adcbf1;
-      position: relative;
-      width: 100%;
-      text-align: center;
-      line-height: 2.5rem;
-      font-weight: 700;
-      font-size: 1.25rem;
-      box-sizing: border-box;
-    }
-  
-    & > .preview-container {
-      height: 100%;
-      width: 100%;
-      display: grid;
-      gap: .5rem;
-      place-items: center;
-      place-content: center;
-      grid-template-rows: 1fr auto;
-      counter-reset: num var(--sprite-cf) col var(--sprite-cc) row var(--sprite-cr);
-  
-      /* frame target width */
-      --sprite-tw: 260;
-      --sprite-r: round(up, calc(var(--sprite-f) / var(--sprite-c)), 1);
-  
-      --sprite-sw: calc(var(--sprite-w) / var(--sprite-c));
-      --sprite-ar: calc(var(--sprite-tw) / var(--sprite-sw));
-      --sprite-uh: calc(var(--sprite-h) * var(--sprite-ar));
-      --sprite-uw: calc(var(--sprite-w) * var(--sprite-ar));
-      --sprite-th: calc(var(--sprite-uh) / var(--sprite-r));
-      --sprite-as: calc(var(--sprite-f) / var(--sprite-fr) * 1s);
-  
-      --sprite-cf: calc(var(--sprite-fs) + 1);
-      --sprite-cc: calc(mod(var(--sprite-fs), var(--sprite-c)) + 1);
-      --sprite-cr: calc(round(down, calc(calc(var(--sprite-tw) * var(--sprite-fs)) / var(--sprite-uw)), 1) + 1);
-      /* Y position, round to check next ROW */
-      --row: calc(round(down, calc(calc(var(--sprite-tw) * var(--sprite-fs)) / var(--sprite-uw)), 1) * var(--sprite-th));
-      /* X position, mod to check COLUMN */
-      --col: mod(calc(var(--sprite-tw) * var(--sprite-fs)), var(--sprite-uw));
-      /* animation duration based on frame rate */
-      animation: frame var(--sprite-as) var(--sprite-at) 0s var(--sprite-ai) var(--sprite-ad) var(--sprite-af) var(--sprite-ap);
-  
-      & > .sprite-container {
-        position: relative;
-        z-index: 1;
-        background-color: white;
-        height: 100%;
-  
-        &:has(> div input[type="radio"]:nth-child(2):checked) {
-          .sprite {
-            scale: -1 1;
-  
-            &:hover {
-              scale: -1.4 1.4;
-            }
-          }
-        }
-  
-        .sprite-direction {
-          position: absolute;
-          right: 0;
-          bottom: 0;
-          display: flex;
-  
-          input {
-            appearance: none;
-            width: 26px;
-            height: 28px;
-  
-            &:before {
-              font-size: 1.25rem;
-              opacity: .25;
-              cursor: pointer;
-            }
-  
-            &:checked {
-              &:before {
-                opacity: .5;
-              }
-            }
-  
-            &:first-child {
-              &:before {
-                content: "◀️";
-              }
-            }
-  
-            &:last-child {
-              &:before {
-                content: "▶️";
-              }
-            }
-          }
-        }
-  
-        .sprite {
-          top: 50%;
-          position: relative;
-          translate: 0 -50%;
-          filter: drop-shadow(2px 4px 6px black);
-          height: calc(1px * var(--sprite-th));
-          width: calc(1px * var(--sprite-tw));
-          background-image: var(--sprite-image);
-          background-size: calc(1px * var(--sprite-uw)) calc(1px * var(--sprite-uh));
-          background-position: calc(-1px * var(--col)) calc(-1px * var(--row));
-          z-index: 1;
-          will-change: scale;
-          transition: scale 0.2s ease;
-  
-          &:hover {
-            scale: 1.4;
-            --color: #ffda0e;
-            filter: drop-shadow(0px 1px 0px var(--color)) drop-shadow(-1px 0px 0px var(--color)) drop-shadow(1px 0px 0px var(--color)) drop-shadow(0px 1px 0px var(--color)) drop-shadow(0px -1px 0px var(--color)) drop-shadow(1px 0px 0px var(--color)) drop-shadow(2px 4px 6px black);
-          }
-        }
-      }
-  
-      &:has(.sprite-stats .sprite-fps select option[value="12"]:checked) {
-        --sprite-fr: 12;
-      }
-  
-      &:has(.sprite-stats .sprite-fps select option[value="24"]:checked) {
-        --sprite-fr: 36;
-      }
-  
-      &:has(.sprite-stats .sprite-fps select option[value="36"]:checked) {
-        --sprite-fr: 36;
-      }
-  
-      &:has(.sprite-stats .sprite-fps select option[value="48"]:checked) {
-        --sprite-fr: 48;
-      }
-  
-      &:has(.sprite-stats .sprite-fps select option[value="64"]:checked) {
-        --sprite-fr: 64;
-      }
-  
-      &:has(.sprite-stats .sprite-fps select option[value="76"]:checked) {
-        --sprite-fr: 76;
-      }
-  
-      &:has(.sprite-stats .sprite-fps select option[value="100"]:checked) {
-        --sprite-fr: 100;
-      }
-  
-      & > .sprite-stats {
-        background: #adcbf1;
-        position: relative;
-        width: 100%;
-        height: 100%;
-        padding: .5rem;
-  
-        dl {
-          display: grid;
-          grid-template-columns: 1fr auto;
-  
-          dt, dd {
-            &:not(:last-of-type) {
-              border-bottom: 1px solid #99b3d3;
-            }
-          }
-  
-          dd {
-            font-weight: bold;
-            font-variant-numeric: tabular-nums;
-            text-align: right;
-  
-            &.sprite-c {
-              &:before {
-                counter-reset: variable var(--sprite-c);
-                content: counter(variable);
-              }
-            }
-  
-            &.sprite-r {
-              &:before {
-                counter-reset: variable var(--sprite-r);
-                content: counter(variable);
-              }
-            }
-  
-            &.sprite-fps {
-              select {
-                background: transparent;
-                border: 0;
-                outline: none;
-                padding: 0;
-                font-weight: 700;
-                font-family: inherit;
-                font-size: inherit;
-                color: #2949c5;
-              }
-            }
-  
-            &.sprite-fr {
-              &:before {
-                counter-reset: variable var(--sprite-f);
-                content: counter(variable);
-              }
-            }
-  
-            &.sprite-tw {
-              &:before {
-                counter-reset: variable var(--sprite-f);
-                content: counter(num) '/' counter(variable);
-              }
-            }
-  
-            &.sprite-cc {
-              &:before {
-                counter-reset: variable var(--sprite-c);
-                content: counter(col) '/' counter(variable);
-              }
-            }
-  
-            &.sprite-cr {
-              &:before {
-                counter-reset: variable var(--sprite-r);
-                content: counter(row) '/' counter(variable);
-              }
-            }
-          }
-        }
-      }
-    }
-  }
   
